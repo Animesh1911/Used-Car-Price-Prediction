@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body style="background-color:powderblue;">
+
+<h3 style="font-family:verdana">Used Car Price Prediction</h3>
+
+<div>
+  <form action="\predict" method="post">
+  
+    <label style="font-family:verdana" for="brand">BRAND</label>
+    <select name="Brand" id="Brand" required="required">
+        <option value="AMBASSADOR">Ambassador</option>
+        <option value="AUDI">Audi</option>
+        <option value="BENTLEY">Bentley</option>
+        <option value="BMW">BMW</option>
+        <option value="CHEVROLET">Chevrolet</option>
+        <option value="DATSUN">Datsun</option>
+        <option value="FIAT">Fiat</option>
+        <option value="FORCE">Force</option>
+        <option value="FORD">Ford</option>
+        <option value="HONDA">Honda</option>
+        <option value="HYUNDAI">Hyundai</option>
+        <option value="ISUZU">Isuzu</option>
+        <option value="JAGUAR">Jaguar</option>
+        <option value="JEEP">Jeep</option>
+        <option value="LAMBORGHINI">Lamborghini</option>
+        <option value="LAND">Land Rover</option>
+        <option value="MAHINDRA">Mahindra</option>
+        <option value="MARUTI">Maruti Suzuki</option>
+        <option value="MERCEDES">Mercedes-Benz</option>
+        <option value="MINI">Mini</option>
+        <option value="MITSUBISHI">Mitsubishi</option>
+        <option value="NISSAN">Nissan</option>
+        <option value="PORSCHE">Porsche</option>
+        <option value="RENAULT">Renault</option>
+        <option value="SKODA">Skoda</option>
+        <option value="TATA">Tata</option>
+        <option value="TOYOTA">Toyota</option>
+        <option value="VOLKSWAGEN">Volkswagen</option>
+        <option value="VOLVO">Volvo</option>
+    </select>
+    
+    <label style="font-family:verdana" for="location">CITY</label>
+    <select name="Location" id="Location" required="required">
+        <option value="Delhi">Delhi</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Pune">Pune</option>
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Kochi">Kochi</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+    </select>
+    
+    <label style="font-family:verdana" for="year">PURCHASE YEAR</label>
+    <input type="number" id="Year" name="Year" placeholder="Purchase Year" required="required">
+    
+    <label style="font-family:verdana" for="kms">KILOMETRES DRIVEN</label>
+    <input type="number" id="Kms" name="Kms" placeholder="Kms Driven" required="required">
+    
+    <label style="font-family:verdana" for="fuel">FUEL TYPE</label>
+    <select name="Fuel" id="Fuel" required="required">
+        <option value="CNG">CNG</option>
+        <option value="Diesel">Diesel</option>
+        <option value="LPG">LPG</option>
+        <option value="Petrol">Petrol</option>
+    </select>
+    
+    <label style="font-family:verdana" for="transmission">TRANSMISSION</label>
+    <select name="Transmission" id="Transmission" required="required">
+        <option value="Automatic">Automatic</option>
+        <option value="Manual">Manual</option>
+    </select>
+  
+    <label style="font-family:verdana" for="mileage">MILEAGE</label>
+    <input type="number" id="mileage" name="Mileage" placeholder="Mileage in kmpl" step="0.01" required="required">
+
+    <label style="font-family:verdana" for="engine">ENGINE</label>
+    <input type="number" id="Engine" name="Engine" placeholder="Engine in CC" step="0.01" required="required">
+
+    <label style="font-family:verdana" for="power">POWER</label>
+    <input type="number" id="Power" name="Power" placeholder="Power in bhp" step="0.01" required="required">
+
+    <label style="font-family:verdana" for="seats">SEATS</label>
+    <select id="Seats" name="Seats" required="required">
+      <option value=2>2</option>
+      <option value=4>4</option>
+      <option value=5>5</option>
+      <option value=6>6</option>
+      <option value=7>7</option>
+      <option value=8>8</option>
+      <option value=9>9</option>
+      <option value=10>10</option>
+    </select>
+        
+    <label style="font-family:verdana" for="owner">OWNER TYPE</label>
+    <select id="Owner" name="Owner" required="required">
+      <option value=1>First</option>
+      <option value=2>Second</option>
+      <option value=3>Third</option>
+      <option value=4>Fourth or Above</option>
+    </select>
+  
+    <input style="font-family:verdana" type="submit" value="Submit">
+  </form>
+  <h4 style="font-family:verdana">{{ prediction_text }}</h4>
+
+   <br>
+   <p style="font-family:arial"><a href="https://github.com/Animesh1911">©2020 Animesh Sharma</a></p>
+</div>
+
+</body>
+</html>
