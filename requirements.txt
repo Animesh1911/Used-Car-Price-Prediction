@@ -9,7 +9,7 @@ itsdangerous==1.1.0
 jinja2==2.10.3
 joblib==0.13.2
 markupsafe==1.1.1
-numpy==1.65.5
+numpy==1.16.5
 pandas==0.25.1
 python-dateutil==2.8.0
 pytz==2019.3
